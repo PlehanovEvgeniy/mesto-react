@@ -1,40 +1,14 @@
 import React from 'react';
-import {Header} from "./Header"
+import {Header} from "./Header";
+import {Main} from "./Main";
+import {Footer} from "./Footer"
 
 function App() {
     return (
         <div className="page">
             <Header/>
-            <main className="main">
-        
-                <section className="profile">
-                    <button type="button" className="profile__avatar-button">
-                        <div className="profile__avatar-edit-button-container">
-                            <img className="profile__avatar-edit-button" src="<%=require('./images/Edit_button.svg')%>" alt="Кнопка Редактировать"/>
-                        </div>
-                        <img className="profile__avatar" src="<%=require('./images/profile.jpg')%>" alt="Фото пользователя" />
-                    </button>
-                    <div className="profile__info">
-                        <h1 id="name" className="profile__title">Жак-Ив Кусто</h1>
-                        <button type="button" className="profile__edit-button">
-                            <img className="profile__edit-button-image" src="<%=require('./images/Edit_button.svg')%>" alt="Кнопка редактировать" />
-                        </button>
-                        <p id="prof" className="profile__subtitle">Исследователь океана</p>
-                    </div>
-                    <button type="button" className="profile__add-button">
-                        <img className="profile__add-button-image" src="<%=require('./images/Add_Button-vector.svg')%>" alt="Кнопка добавить" />
-                    </button>
-                </section>
-                <section className="elements">
-                    <ul className="elements__container">
-                    </ul>
-                </section>
-
-            </main>
-
-            <footer className="footer">
-                <p className="footer__copyright">&copy; 2020 Mesto Russia </p>
-            </footer>
+            <Main/>
+            <Footer/>
 
             <template id="card_template" className='default-card'>
                 <li className="element">
