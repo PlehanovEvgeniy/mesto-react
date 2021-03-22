@@ -24,5 +24,5 @@ export const Card = ({card, onCardClick}) => {
                 </div>
             </div>
         </li>
-    )
+    );
 }

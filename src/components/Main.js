@@ -61,5 +61,5 @@ export const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) => 
             </ul>
         </section>
     </main>
-    )
+    );
 }

@@ -15,5 +15,5 @@ export const PopupWithForm = ({title, name, children, isOpen, textBtn, onClose})
                 </form>
             </div>
         </section>
-    )
+    );
 }

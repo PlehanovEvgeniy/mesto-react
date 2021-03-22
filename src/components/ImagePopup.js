@@ -12,5 +12,5 @@ export const ImagePopup = ({card, isOpen, onClose}) => {
                 <button className="button button_type_close" type="button" aria-label="Закрыть" onClick={onClose}/>
             </div>
         </div>
-    )
+    );
 }
