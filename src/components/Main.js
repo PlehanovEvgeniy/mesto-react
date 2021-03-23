@@ -3,10 +3,10 @@ import {api} from "../utils/api";
 import edit_button_img from "../images/Edit_button.svg";
 import profile_img from "../images/profile.jpg";
 import add_button_img from "../images/Add_Button-vector.svg";
-import {Card} from "./Card";
+import Card from "./Card";
 
 
-export const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) => {
+const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) => {
 
     const [userName, setUserName] = useState("Жак-Ив Кусто");
     const [userDescription, setUserDescription] = useState("Исследователь океана");
@@ -63,3 +63,5 @@ export const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) => 
     </main>
     );
 }
+
+export default Main

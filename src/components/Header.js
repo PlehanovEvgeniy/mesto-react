@@ -1,7 +1,7 @@
 import React from 'react';
 import logo_mesto_img from "../images/logo_mesto.svg"
 
-export const Header = () => {
+const Header = () => {
     return (
         <header className="header">
             <a className="logo" href="#" target="_blank">
@@ -10,3 +10,5 @@ export const Header = () => {
         </header>
     );
 }
+
+export default Header

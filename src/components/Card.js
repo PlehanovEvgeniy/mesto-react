@@ -2,7 +2,7 @@ import React from 'react';
 import delete_svg from "../images/delete.svg";
 import like_svg from "../images/like.svg";
 
-export const Card = ({card, onCardClick}) => {
+const Card = ({card, onCardClick}) => {
 
     const handleClick = () => {
         onCardClick(card);
@@ -26,3 +26,5 @@ export const Card = ({card, onCardClick}) => {
         </li>
     );
 }
+
+export default Card

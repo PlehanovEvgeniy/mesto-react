@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const PopupWithForm = ({title, name, children, isOpen, textBtn, onClose}) => {
+const PopupWithForm = ({title, name, children, isOpen, textBtn, onClose}) => {
 
     let popupIsVisible = isOpen ? 'popup_opened' : '';
 
@@ -17,3 +17,5 @@ export const PopupWithForm = ({title, name, children, isOpen, textBtn, onClose})
         </section>
     );
 }
+
+export default PopupWithForm

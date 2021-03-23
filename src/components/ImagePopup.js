@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ImagePopup = ({card, isOpen, onClose}) => {
+const ImagePopup = ({card, isOpen, onClose}) => {
 
     let popupIsVisible = isOpen ? 'popup_opened' : '';
 
@@ -14,3 +14,5 @@ export const ImagePopup = ({card, isOpen, onClose}) => {
         </div>
     );
 }
+
+export default ImagePopup
