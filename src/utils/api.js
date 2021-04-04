@@ -4,14 +4,14 @@ export class Api {
         this._url = url;
     }
 
-    saveProfile(name, about) {
+    setUserInfo(name, about) {
         return this._patchRequest('/users/me', {
             name,
             about
         });
     }
 
-    getProfile() {
+    getUserInfo() {
         return this._getRequest('/users/me');
     }
 
@@ -42,6 +42,10 @@ export class Api {
 
     takeLike(cardId) {
         return this._deleteRequest(`/cards/likes/${cardId}`);
+    }
+
+    changeLikeCardStatus(cardId,toggle) {
+        return toggle ? this.putLike(cardId) : this.takeLike(cardId);
     }
 
     _deleteRequest(url) {

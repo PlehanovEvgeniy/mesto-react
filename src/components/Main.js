@@ -1,34 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import {api} from "../utils/api";
+import React from 'react';
 import edit_button_img from "../images/Edit_button.svg";
-import profile_img from "../images/profile.jpg";
 import add_button_img from "../images/Add_Button-vector.svg";
 import Card from "./Card";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
+const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick, cards, onCardLike, onCardDelete}) => {
 
-const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) => {
-
-    const [userName, setUserName] = useState("Жак-Ив Кусто");
-    const [userDescription, setUserDescription] = useState("Исследователь океана");
-    const [userAvatar, setUserAvatar] = useState(profile_img);
-    const [cards, setCards] = useState([]);
-
-    useEffect(() => {
-        api.getProfile()
-            .then ((data) => {
-                setUserName(data.name);
-                setUserDescription(data.about);
-                setUserAvatar(data.avatar);
-            })
-            .catch((err) => {console.log(err)});
-
-        api.getCards()
-            .then((data) => {
-                setCards([...data]);
-            })
-            .catch((err) => {console.log(err)});
-    }, [])
-
+    const currentUser = React.useContext(CurrentUserContext);
+          
     return (
     <main className="main">
         <section className="profile">
@@ -36,14 +15,14 @@ const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) => {
                 <div className="profile__avatar-edit-button-container">
                     <img className="profile__avatar-edit-button" src={edit_button_img} alt="Кнопка Редактировать"/>
                 </div>
-                <img className="profile__avatar" src={userAvatar} alt="Фото пользователя" />
+                <img className="profile__avatar" src={currentUser.avatar} alt="Фото пользователя" />
             </button>
             <div className="profile__info">
-                <h1 id="name" className="profile__title">{userName}</h1>
+                <h1 id="name" className="profile__title">{currentUser.name}</h1>
                 <button type="button" className="profile__edit-button" onClick={onEditProfile}>
                     <img className="profile__edit-button-image" src={edit_button_img} alt="Кнопка редактировать" />
                 </button>
-                <p id="prof" className="profile__subtitle">{userDescription}</p>
+                <p id="prof" className="profile__subtitle">{currentUser.about}</p>
             </div>
             <button type="button" className="profile__add-button" onClick={onAddPlace}>
                 <img className="profile__add-button-image" src={add_button_img} alt="Кнопка добавить" />
@@ -56,6 +35,8 @@ const Main = ({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) => {
                         key={index}
                         card={card}
                         onCardClick={onCardClick}
+                        onCardLike={onCardLike}
+                        onCardDelete={onCardDelete}
                     />
                 })}
             </ul>
