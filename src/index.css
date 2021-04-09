@@ -56,3 +56,6 @@
 @import url(./blocks/element/__like/element__like-conteiner.css);
 @import url(./blocks/element/__delete/element__delete-conteiner.css);
 @import url(./blocks/element/__delete/element__delete-hidden.css);
+@import url(./blocks/infotooltip/infotooltip.css);
+@import url(./blocks/infotooltip/__picture/infotooltip__picture.css);
+@import url(./blocks/infotooltip/__text/infotooltip__text.css);
