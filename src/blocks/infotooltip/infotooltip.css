@@ -1,6 +1,7 @@
 .infotooltip {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 430px;
   height: 330px;

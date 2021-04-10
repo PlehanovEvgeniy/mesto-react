@@ -11,7 +11,7 @@ const Header = ({userEmail, onSignOut}) => {
             <a className="logo" href="/" target="_blank">
                 <img className="logo__picture" src={logo_mesto_img} alt="Логотип Место" />
             </a>
-            <div className="header__link">
+            <div className="header__links">
                 <p className="header__link header__link_email">
                     {
                         location.pathname === "/" ? userEmail : ""

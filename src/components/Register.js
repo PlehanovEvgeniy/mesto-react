@@ -30,7 +30,7 @@ return(
         <button className="sign-form__button"type="submit">Зарегистрироваться</button>
         <div className="sign-form__text">
             Уже зарегистрированы? 
-            <Link to="/sign-in" className="sign-form__text">Войти</Link>
+            <Link to="/sign-in" className="sign-form__text"> Войти</Link>
         </div>
     </form>
 );
